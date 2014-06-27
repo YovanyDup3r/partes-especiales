@@ -1,0 +1,66 @@
+es:
+    activerecord:
+        models:
+             user: Usuario
+             postulate: Postulaciones
+             church: Iglesia
+             music_type: Tipos de Musica
+             special_part: Partes Especiales
+             special_part_user: Comentarios Partes Especiales
+             special_part_user_user: Like de Comentarios
+             like_special_part_user_user: Like Partes Especiales
+        attributes:
+            user:
+                name: Nombre
+                lastname: Apellido
+                email: Email
+                password: Clave
+                password_confirmation: Confirmar Clave
+                admin: Administrador
+                sign_up: Ingresar
+            postulate:
+                id: ID
+                user_id: Usuario
+                church_id: Iglesia
+                music_type_id: Tipo de Musica
+                date: Fecha 
+                music_name: Nombre del tema
+                created_at: Creado
+            church: 
+                id: ID
+                name: Nombre
+                addres: Direccion
+                created_at: Creado
+            music_type:
+                id: ID
+                name: Nombre
+                created_at: Creado
+            special_part:
+                id: ID
+                user_id: Usuario
+                church_id: Iglesia
+                video_url: Direccion del video
+                audio_url: Direccion del audio
+                created_at: Creado
+            special_part_user:
+                id: ID
+                special_part_id: Parte Especial
+                user_id: Usuario
+                comment: Comentario
+                created_at: Creado
+            special_part_user_user:
+                id: ID
+                special_part_user_id: Comentario
+                special_part_id: Parte Especial
+                user_id: Usuario 
+                like: Me Gusta
+                created_at: Creado
+            like_special_part_user_user:
+                id: ID
+                special_part_id: Parte Especial
+                church_id: Iglesia
+                user_id: Usuario
+                like: Me Gusta
+                created_at: Creado
+
+

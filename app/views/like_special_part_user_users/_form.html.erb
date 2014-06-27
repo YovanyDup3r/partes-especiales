@@ -1,0 +1,10 @@
+<%= simple_form_for @like_special_part_user_user, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :special_part_id %>
+  <%= f.input :church_id %>
+  <%= f.input :user_id, input_html:{ value: current_user.id , disabled: true} %>
+  <%= f.input :like %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                like_special_part_user_users_path, :class => 'btn btn-default' %>
+<% end %>

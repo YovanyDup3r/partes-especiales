@@ -1,0 +1,27 @@
+<%- model_class = Postulate -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:user_id) %>:</strong></dt>
+  <dd><%= @postulate.user_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:church_id) %>:</strong></dt>
+  <dd><%= @postulate.church_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:music_type_id) %>:</strong></dt>
+  <dd><%= @postulate.music_type_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:date) %>:</strong></dt>
+  <dd><%= @postulate.date %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:music_name) %>:</strong></dt>
+  <dd><%= @postulate.music_name %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              postulates_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_postulate_path(@postulate), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              postulate_path(@postulate),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

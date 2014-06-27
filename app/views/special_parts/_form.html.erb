@@ -1,0 +1,13 @@
+<%= simple_form_for @special_part, :html => { :class => 'form-horizontal' } do |f| %>
+  <label>Iglesia</label>
+  <br>
+  <%= collection_select(:special_part, :church_id, Church.all, :id, :name, prompt: false)%>
+  <br>
+  <%= f.input :user_id, input_html:{ class: 'form-control',value: current_user.id } %>
+  <%= f.input :video_url, input_html: {class: 'form-control'} %>
+  <%= f.input :audio_url, input_html: {class: 'form-control'} %>
+  <br>
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                special_parts_path, :class => 'btn btn-default' %>
+<% end %>

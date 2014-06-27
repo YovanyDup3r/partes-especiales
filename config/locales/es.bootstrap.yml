@@ -1,0 +1,35 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+es:
+  helpers:
+    actions: "Acciones"
+    links:
+      back: "Atrás"
+      cancel: "Cancelar"
+      confirm: "Estás seguro?"
+      destroy: "Borrar"
+      new: "Nuevo"
+      edit: "Editar"
+    titles:
+      edit: "Editar"
+      save: "Guardar"
+      new: "Nuevo"
+      delete: "Borrar"
+      sing_in: "Ingresar"
+  links:
+    churches: Iglesias
+    music_type: Tipo de Musica
+    postulates: Postular
+    special_part: Partes Especiales
+    special_part_user: Comentarios
+  titles:
+    special_parts: Partes Especiales  
+  time:
+    formats:
+      default: "%d.%m.%Y"
+  date:
+    order:
+      - :day
+      - :month
+      - :year
